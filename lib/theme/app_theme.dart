@@ -11,7 +11,7 @@ class AppTheme {
       ),
     ),
     colorScheme: ColorScheme.fromSeed(
-      seedColor: Colors.green,
+      seedColor: Colors.blue,
     ),
   );
 }

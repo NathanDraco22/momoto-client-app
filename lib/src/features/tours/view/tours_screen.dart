@@ -85,7 +85,7 @@ class _Body extends StatelessWidget {
                             children: [
                               Text(
                                 "Somoto Canyon",
-                                style: Theme.of(context).textTheme.headlineMedium,
+                                style: Theme.of(context).textTheme.headlineSmall,
                               ),
                               Text(
                                 "June 25, 2023",
@@ -99,9 +99,12 @@ class _Body extends StatelessWidget {
                           ),
                           Text(
                             "by: A great tour company",
-                            style: Theme.of(context).textTheme.bodyLarge,
+                            style: Theme.of(context).textTheme.bodyMedium,
                             textAlign: TextAlign.start,
                           ),
+
+                          const SizedBox(height: 16),
+
                           Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
