@@ -23,7 +23,7 @@ class _DescriptionSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              FilledButton.tonalIcon(
+              OutlinedButton.icon(
                 onPressed: () {
                   Navigator.push(
                     context,
@@ -34,7 +34,6 @@ class _DescriptionSection extends StatelessWidget {
                 },
                 icon: Text(
                   "Panoramic View",
-                  style: Theme.of(context).textTheme.titleMedium,
                 ),
                 label: const Icon(
                   Icons.panorama_photosphere,

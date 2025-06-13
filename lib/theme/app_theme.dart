@@ -1,131 +1,56 @@
 import 'package:flutter/material.dart';
 
-// --- Paleta "Tierra y Mar Tropical" ---
+const primaryColor = Color(0xff0077B6);
+const softPrimaryColor = Color.fromARGB(255, 164, 223, 255);
+const lightPrimaryColor = Color.fromARGB(255, 203, 237, 255);
+const cornColorColor = Color(0xffF4D35E);
+const cornSoftColor = Color.fromARGB(255, 251, 233, 169);
+const softSandColor = Color(0xffF9F7F0);
+const sandColor = Color.fromARGB(255, 255, 244, 206);
+const natureGreen = Color(0xff4CAF50);
+const traditionalRed = Color(0xffD72638);
 
-// Primario: Verde Selva / Azul Profundo
-const Color appPrimaryColor = Color(0xFF00796B);
-
-// Secundario / Acento: Naranja Cálido
-const Color appAccentColor = Color(0xFFFF8F00);
-
-// --- Colores Neutros ---
-
-// Fondo Principal
-const Color appBackgroundColor = Color(0xFFF5F5F5);
-
-// Superficies (Tarjetas, Dialogos)
-const Color appSurfaceColor = Color(0xFFFFFFFF); // Blanco puro
-
-// Texto Principal (sobre fondos claros)
-const Color appTextPrimary = Color(0xFF212121); // Gris oscuro
-
-// Texto Secundario / Desactivado (sobre fondos claros)
-const Color appTextSecondary = Color(0xFF757575); // Gris medio
-
-// Texto sobre colores primarios/acentos (cuando el fondo es oscuro)
-const Color appTextOnPrimary = Color(0xFFFFFFFF); // Blanco puro
-const Color appTextOnAccent = Color(0xFF000000); // Negro (para mejor contraste en naranja claro)
-
-// --- Colores de Estado (Funcionales) ---
-
-// Error
-const Color appErrorColor = Color(0xFFD32F2F); // Rojo intenso
-
-// Éxito / Confirmación
-const Color appSuccessColor = Color(0xFF388E3C); // Verde oscuro
-
-// Advertencia
-const Color appWarningColor = Color(0xFFFBC02D); // Amarillo ámbar
-
-// --- Paleta "Tierra y Mar Tropical" (Modo Oscuro) ---
-
-// Primario: Un verde/azul profundo pero visible en fondos oscuros
-const Color appPrimaryColorDark = Color(0xFF4DB6AC); // Teal 300 (más claro que el primario claro)
-
-// Secundario / Acento: Naranja Cálido (se mantiene vibrante)
-const Color appAccentColorDark = Color(0xFFFFB300); // Amber 500 (ligeramente más claro que el acento claro)
-
-// --- Colores Neutros (Modo Oscuro) ---
-
-// Fondo Principal (Dark)
-const Color appBackgroundColorDark = Color(0xFF121212); // Gris muy oscuro, casi negro
-
-// Superficies (Tarjetas, Dialogos - Dark)
-const Color appSurfaceColorDark = Color(0xFF1E1E1E); // Gris oscuro
-
-// Texto Principal (sobre fondos oscuros)
-const Color appTextPrimaryDark = Color(0xFFFFFFFF); // Blanco (para alto contraste)
-
-// Texto Secundario / Desactivado (sobre fondos oscuros)
-const Color appTextSecondaryDark = Color(0xFFB0B0B0); // Gris claro
-
-// Texto sobre colores primarios/acentos (cuando el fondo es claro)
-const Color appTextOnPrimaryDark = Color(0xFF000000); // Negro (para contraste sobre Teal 300)
-const Color appTextOnAccentDark = Color(0xFF000000); // Negro (para contraste sobre Amber 500)
-
-// --- Colores de Estado (Funcionales - Modo Oscuro) ---
-
-// Error
-const Color appErrorColorDark = Color(0xFFEF5350); // Rojo más claro (Red 400)
-
-// Éxito / Confirmación
-const Color appSuccessColorDark = Color(0xFF66BB6A); // Verde más claro (Green 400)
-
-// Advertencia
-const Color appWarningColorDark = Color(0xFFFFCA28); // Amarillo más claro (Amber 400)
+final value = ["9ac5e5", "4fb19d", "edce7a", "c98c9a", "e5c6c3"];
 
 class AppTheme {
   ThemeData getLightTheme() => ThemeData.light().copyWith(
-    scaffoldBackgroundColor: appBackgroundColor,
-    appBarTheme: AppBarTheme(
-      toolbarHeight: 48,
-      backgroundColor: appPrimaryColor,
-      titleTextStyle: TextStyle(
-        color: appTextOnPrimary,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
+    scaffoldBackgroundColor: const Color.fromARGB(255, 241, 243, 244),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        backgroundColor: lightPrimaryColor,
       ),
     ),
-    cardTheme: CardThemeData(
-      color: appSurfaceColor,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          16,
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(
+          color: primaryColor,
+          width: 2,
+        ),
+        shape: RoundedRectangleBorder(
+          side: BorderSide(
+            color: primaryColor,
+            width: 2,
+          ),
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     ),
-    colorScheme: ColorScheme.light(
-      primary: appPrimaryColor,
-      onPrimary: appTextOnPrimary,
-      secondary: appAccentColor,
-      surface: appSurfaceColor,
-    ),
-  );
-
-  ThemeData getDarkTheme() => ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: appBackgroundColorDark,
-    appBarTheme: AppBarTheme(
-      toolbarHeight: 48,
-      backgroundColor: appPrimaryColorDark,
-      titleTextStyle: TextStyle(
-        color: appTextOnPrimaryDark,
-        fontSize: 20,
-        fontWeight: FontWeight.bold,
-      ),
-    ),
-    cardTheme: CardThemeData(
-      color: appSurfaceColorDark,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(
-          16,
+    filledButtonTheme: FilledButtonThemeData(
+      style: FilledButton.styleFrom(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(10),
         ),
       ),
     ),
-    colorScheme: ColorScheme.dark(
-      primary: appPrimaryColorDark,
-      onPrimary: appTextOnPrimaryDark,
-      secondary: appAccentColorDark,
-      surface: appSurfaceColorDark,
+    appBarTheme: AppBarTheme(
+      backgroundColor: Colors.white,
+      foregroundColor: Colors.black,
+      surfaceTintColor: Colors.transparent,
+      centerTitle: true,
+    ),
+    colorScheme: ColorScheme.light().copyWith(
+      primary: primaryColor,
+      secondaryContainer: cornSoftColor,
     ),
   );
 }

@@ -19,6 +19,54 @@ class _RootScaffold extends StatelessWidget {
         title: const Text("Tour Detail"),
       ),
       body: _Body(),
+      bottomNavigationBar: BottomAppBar(
+        height: 120,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                Text(
+                  "Price per person",
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                const Spacer(),
+                Text(
+                  "\$ 100",
+                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
+
+            Divider(),
+
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                SizedBox(
+                  height: 48,
+                  child: OutlinedButton(
+                    onPressed: () {},
+                    child: const Text("Ask Provider"),
+                  ),
+                ),
+                SizedBox(
+                  height: 48,
+                  width: MediaQuery.sizeOf(context).width * 0.45,
+                  child: FilledButton.tonal(
+                    onPressed: () {},
+                    child: const Text("Book Now"),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
@@ -110,55 +158,6 @@ class _Body extends StatelessWidget {
                         ItineraryStepper(),
                       ],
                     ),
-
-                    DefaultTextStyle(
-                      style: Theme.of(context).textTheme.labelLarge!.copyWith(
-                        fontSize: 16,
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.stretch,
-                        spacing: 12,
-                        children: [
-                          Text("Pricing", style: Theme.of(context).textTheme.headlineSmall),
-                          Row(
-                            children: [
-                              Text(
-                                "Price per person",
-                              ),
-                              const Spacer(),
-                              Text(
-                                "\$ 100",
-                              ),
-                            ],
-                          ),
-                        ],
-                      ),
-                    ),
-
-                    SizedBox(height: 32),
-
-                    Divider(),
-
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        SizedBox(
-                          height: 60,
-                          child: FilledButton(
-                            onPressed: () {},
-                            child: const Text("Ask Provider"),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 60,
-                          child: FilledButton(
-                            onPressed: () {},
-                            child: const Text("Book Now"),
-                          ),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 16),
                   ],
                 ),
               ),
