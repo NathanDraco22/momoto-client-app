@@ -59,7 +59,13 @@ class _RootScaffold extends StatelessWidget {
                   width: MediaQuery.sizeOf(context).width * 0.45,
                   child: FilledButton.tonal(
                     onPressed: () {},
-                    child: const Text("Book Now"),
+                    child: const Text(
+                      "Book Now",
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 16,
+                      ),
+                    ),
                   ),
                 ),
               ],
