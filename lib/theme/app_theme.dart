@@ -14,6 +14,9 @@ final value = ["9ac5e5", "4fb19d", "edce7a", "c98c9a", "e5c6c3"];
 
 class AppTheme {
   ThemeData getLightTheme() => ThemeData.light().copyWith(
+    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+      backgroundColor: Colors.white,
+    ),
     scaffoldBackgroundColor: const Color.fromARGB(255, 241, 243, 244),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
