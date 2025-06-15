@@ -53,7 +53,7 @@ class AppTheme {
     ),
     colorScheme: ColorScheme.light().copyWith(
       primary: primaryColor,
-      secondaryContainer: cornSoftColor,
+      secondaryContainer: cornColorColor,
     ),
   );
 }

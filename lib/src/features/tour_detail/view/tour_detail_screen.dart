@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turismo_client/src/features/booking/view/booking_screen.dart';
 
 class TourDetailScreen extends StatelessWidget {
   const TourDetailScreen({super.key});
@@ -20,30 +21,9 @@ class _RootScaffold extends StatelessWidget {
       ),
       body: _Body(),
       bottomNavigationBar: BottomAppBar(
-        height: 120,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Row(
-              children: [
-                Text(
-                  "Price per person",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-                const Spacer(),
-                Text(
-                  "\$ 100",
-                  style: Theme.of(context).textTheme.bodyLarge?.copyWith(
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
-              ],
-            ),
-
-            Divider(),
-
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -58,7 +38,14 @@ class _RootScaffold extends StatelessWidget {
                   height: 48,
                   width: MediaQuery.sizeOf(context).width * 0.45,
                   child: FilledButton.tonal(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const BookingScreen(),
+                        ),
+                      );
+                    },
                     child: const Text(
                       "Book Now",
                       style: TextStyle(
@@ -162,6 +149,35 @@ class _Body extends StatelessWidget {
                         SizedBox(height: 8),
 
                         ItineraryStepper(),
+                      ],
+                    ),
+
+                    Divider(),
+
+                    SizedBox(height: 8),
+
+                    Text(
+                      "Pricing",
+                      style: Theme.of(context).textTheme.headlineSmall,
+                    ),
+
+                    const SizedBox(height: 8),
+
+                    Row(
+                      children: [
+                        Text(
+                          "Price per person",
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                        const Spacer(),
+                        Text(
+                          "\$ 100",
+                          style: Theme.of(context).textTheme.bodyLarge?.copyWith(
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
                       ],
                     ),
                   ],

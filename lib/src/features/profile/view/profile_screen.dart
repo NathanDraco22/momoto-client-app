@@ -26,7 +26,27 @@ class _Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Center(
-      child: Text("ProfileScreen"),
+      child: Padding(
+        padding: EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            SizedBox(height: 8),
+            CircleAvatar(
+              radius: 60,
+            ),
+            SizedBox(height: 16),
+            Text(
+              "John Doe",
+              style: TextStyle(
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+
+            Text("Joined since 2023"),
+          ],
+        ),
+      ),
     );
   }
 }
