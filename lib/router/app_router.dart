@@ -1,7 +1,7 @@
 import 'package:go_router/go_router.dart';
 import 'package:turismo_client/src/features/auth/view/login_screen.dart';
+import 'package:turismo_client/src/features/inbox/view/inbox_screen.dart';
 import 'package:turismo_client/src/features/main/view/main_screen.dart';
-import 'package:turismo_client/src/features/profile/view/profile_screen.dart';
 import 'package:turismo_client/src/features/sites/view/sites_screen.dart';
 import 'package:turismo_client/src/features/tours/view/tours_screen.dart';
 
@@ -42,8 +42,8 @@ class AppRouter {
           StatefulShellBranch(
             routes: [
               GoRoute(
-                path: "/profile",
-                builder: (context, state) => const ProfileScreen(),
+                path: "/inbox",
+                builder: (context, state) => const InboxScreen(),
               ),
             ],
           ),

@@ -3,6 +3,9 @@ import 'dart:developer';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:turismo_client/src/features/main/view/main_containers.dart';
+import 'package:turismo_client/src/features/main/view/widgets/profile_drawer.dart';
+
+import 'widgets/main_app_bar.dart';
 
 class MainScreen extends StatelessWidget {
   const MainScreen({super.key, required this.navigationShell});
@@ -43,9 +46,8 @@ class _RootScaffoldState extends State<_RootScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Turismo"),
-      ),
+      endDrawer: ProfileDrawer(),
+      appBar: MainAppBar(),
       body: SafeArea(
         child: _Body(widget.navigationShell),
       ),
@@ -69,8 +71,8 @@ class _RootScaffoldState extends State<_RootScaffold> {
           ),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.account_circle_outlined),
-            label: 'Profile',
+            icon: Icon(Icons.inbox_outlined),
+            label: 'Inbox',
           ),
         ],
       ),

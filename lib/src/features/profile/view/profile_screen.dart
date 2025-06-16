@@ -25,7 +25,7 @@ class _Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
+    return Center(
       child: Padding(
         padding: EdgeInsets.all(8.0),
         child: Column(
@@ -38,12 +38,39 @@ class _Body extends StatelessWidget {
             Text(
               "John Doe",
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
             ),
 
-            Text("Joined since 2023"),
+            Text(
+              "jonh.doe@me.com",
+              style: TextStyle(
+                fontSize: 16,
+                color: Colors.grey.shade600,
+              ),
+            ),
+
+            Container(
+              width: double.infinity,
+              decoration: BoxDecoration(color: Colors.white),
+              child: Column(
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.history_edu_sharp),
+                    title: Text("Booking History"),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.help_outline_outlined),
+                    title: Text("Terms and Conditions"),
+                  ),
+                  ListTile(
+                    leading: Icon(Icons.logout),
+                    title: Text("Logout"),
+                  ),
+                ],
+              ),
+            ),
           ],
         ),
       ),
