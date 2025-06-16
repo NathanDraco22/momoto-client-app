@@ -32,7 +32,7 @@ class _DescriptionSection extends StatelessWidget {
                     ),
                   );
                 },
-                icon: Text(
+                icon: const Text(
                   "Panoramic View",
                 ),
                 label: const Icon(
@@ -48,7 +48,7 @@ class _DescriptionSection extends StatelessWidget {
             style: Theme.of(context).textTheme.headlineMedium,
           ),
 
-          Wrap(
+          const Wrap(
             spacing: 8,
             runSpacing: 8,
             direction: Axis.horizontal,
@@ -62,7 +62,7 @@ class _DescriptionSection extends StatelessWidget {
             ],
           ),
 
-          Placeholder(),
+          const Placeholder(),
         ],
       ),
     );
@@ -86,7 +86,7 @@ class ActivityIcon extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: Colors.black26),
       ),
-      child: Row(
+      child: const Row(
         spacing: 4,
         children: [
           Icon(

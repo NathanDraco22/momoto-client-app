@@ -61,7 +61,7 @@ class _Body extends StatelessWidget {
                   Flexible(
                     flex: 5,
                     child: ClipRRect(
-                      borderRadius: BorderRadius.vertical(
+                      borderRadius: const BorderRadius.vertical(
                         top: Radius.circular(12),
                       ),
                       child: Image.network(
@@ -87,7 +87,7 @@ class _Body extends StatelessWidget {
                                 "Somoto Canyon",
                                 style: Theme.of(context).textTheme.headlineSmall,
                               ),
-                              Text(
+                              const Text(
                                 "June 25, 2023",
                                 style: TextStyle(
                                   color: Colors.grey,
@@ -109,7 +109,7 @@ class _Body extends StatelessWidget {
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
                             crossAxisAlignment: CrossAxisAlignment.center,
                             children: [
-                              Row(
+                              const Row(
                                 children: [
                                   Icon(Icons.location_on_outlined),
                                   Text(

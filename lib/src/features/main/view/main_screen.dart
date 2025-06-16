@@ -16,9 +16,9 @@ class MainScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     log("dibujando main screen");
     return MainContainer(
-      key: ValueKey("MainContainer"),
+      key: const ValueKey("MainContainer"),
       child: _RootScaffold(
-        key: ValueKey("RootScaffold"),
+        key: const ValueKey("RootScaffold"),
         navigationShell: navigationShell,
       ),
     );
@@ -46,8 +46,8 @@ class _RootScaffoldState extends State<_RootScaffold> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      endDrawer: ProfileDrawer(),
-      appBar: MainAppBar(),
+      endDrawer: const ProfileDrawer(),
+      appBar: const MainAppBar(),
       body: SafeArea(
         child: _Body(widget.navigationShell),
       ),

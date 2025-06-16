@@ -27,15 +27,15 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: Column(
           children: [
-            SizedBox(height: 8),
-            CircleAvatar(
+            const SizedBox(height: 8),
+            const CircleAvatar(
               radius: 60,
             ),
-            SizedBox(height: 16),
-            Text(
+            const SizedBox(height: 16),
+            const Text(
               "John Doe",
               style: TextStyle(
                 fontSize: 26,
@@ -53,8 +53,8 @@ class _Body extends StatelessWidget {
 
             Container(
               width: double.infinity,
-              decoration: BoxDecoration(color: Colors.white),
-              child: Column(
+              decoration: const BoxDecoration(color: Colors.white),
+              child: const Column(
                 children: [
                   ListTile(
                     leading: Icon(Icons.history_edu_sharp),

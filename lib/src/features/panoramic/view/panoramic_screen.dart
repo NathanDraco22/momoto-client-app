@@ -22,7 +22,7 @@ class _RootScaffold extends StatelessWidget {
         foregroundColor: Colors.white,
         elevation: 0.0,
       ),
-      body: _Body(),
+      body: const _Body(),
     );
   }
 }

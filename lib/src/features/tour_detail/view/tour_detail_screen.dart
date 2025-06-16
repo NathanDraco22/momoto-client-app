@@ -19,7 +19,7 @@ class _RootScaffold extends StatelessWidget {
       appBar: AppBar(
         title: const Text("Tour Detail"),
       ),
-      body: _Body(),
+      body: const _Body(),
       bottomNavigationBar: BottomAppBar(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -75,7 +75,7 @@ class _Body extends StatelessWidget {
         width: screenSize.width,
         height: screenSize.height,
         child: SingleChildScrollView(
-          padding: EdgeInsets.only(bottom: 24),
+          padding: const EdgeInsets.only(bottom: 24),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
@@ -106,7 +106,7 @@ class _Body extends StatelessWidget {
                       ],
                     ),
 
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
 
                     Column(
                       spacing: 12,
@@ -119,7 +119,7 @@ class _Body extends StatelessWidget {
 
                         DefaultTextStyle(
                           style: Theme.of(context).textTheme.labelLarge!.copyWith(fontSize: 14),
-                          child: Column(
+                          child: const Column(
                             spacing: 8,
                             crossAxisAlignment: CrossAxisAlignment.stretch,
                             children: [
@@ -133,11 +133,11 @@ class _Body extends StatelessWidget {
                       ],
                     ),
 
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
 
-                    Divider(),
+                    const Divider(),
 
-                    SizedBox(height: 16),
+                    const SizedBox(height: 16),
 
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -146,15 +146,15 @@ class _Body extends StatelessWidget {
                           "Itinerary",
                           style: Theme.of(context).textTheme.headlineSmall,
                         ),
-                        SizedBox(height: 8),
+                        const SizedBox(height: 8),
 
-                        ItineraryStepper(),
+                        const ItineraryStepper(),
                       ],
                     ),
 
-                    Divider(),
+                    const Divider(),
 
-                    SizedBox(height: 8),
+                    const SizedBox(height: 8),
 
                     Text(
                       "Pricing",
@@ -216,39 +216,39 @@ class _ItineraryStepperState extends State<ItineraryStepper> {
       controlsBuilder: (context, details) => const SizedBox(),
       steps: [
         Step(
-          title: Text("Breakfast"),
+          title: const Text("Breakfast"),
           isActive: true,
           content: SizedBox(
             width: screenSize.width * 0.8,
-            child: Text(
+            child: const Text(
               "Enjoy a delicious breakfast",
             ),
           ),
         ),
         Step(
-          title: Text("Discover Granada"),
+          title: const Text("Discover Granada"),
           isActive: true,
           content: SizedBox(
             width: screenSize.width * 0.8,
-            child: Text(
+            child: const Text(
               "Discover the vibrant culture of Granada.",
             ),
           ),
         ),
         Step(
           isActive: true,
-          title: Text("Lunch"),
+          title: const Text("Lunch"),
           content: SizedBox(
             width: screenSize.width * 0.8,
-            child: Text("Relax and enjoy a delicious lunch."),
+            child: const Text("Relax and enjoy a delicious lunch."),
           ),
         ),
         Step(
           isActive: true,
-          title: Text("Dinner"),
+          title: const Text("Dinner"),
           content: SizedBox(
             width: screenSize.width * 0.8,
-            child: Text("Relax and enjoy a delicious dinner."),
+            child: const Text("Relax and enjoy a delicious dinner."),
           ),
         ),
       ],

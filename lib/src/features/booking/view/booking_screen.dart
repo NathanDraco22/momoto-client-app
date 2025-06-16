@@ -21,7 +21,7 @@ class _RootScaffold extends StatelessWidget {
         title: const Text("Booking"),
         centerTitle: true,
       ),
-      body: _Body(),
+      body: const _Body(),
       bottomNavigationBar: BottomAppBar(
         height: 150,
         child: Column(
@@ -31,10 +31,10 @@ class _RootScaffold extends StatelessWidget {
               children: [
                 FilledButton.icon(
                   onPressed: () {},
-                  label: Text(
+                  label: const Text(
                     "Add Coupon",
                   ),
-                  icon: Icon(Icons.add_box_outlined),
+                  icon: const Icon(Icons.add_box_outlined),
                 ),
 
                 Text(
@@ -43,7 +43,7 @@ class _RootScaffold extends StatelessWidget {
                 ),
               ],
             ),
-            Spacer(),
+            const Spacer(),
             SizedBox(
               width: double.infinity,
               height: 56,
@@ -77,7 +77,7 @@ class _Body extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               "Number of People",
               style: Theme.of(context).textTheme.headlineSmall,
@@ -98,13 +98,13 @@ class _Body extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 8),
+            const SizedBox(height: 8),
             Text(
               "Booking Summary",
               style: Theme.of(context).textTheme.headlineSmall,
             ),
 
-            SizedBox(height: 16),
+            const SizedBox(height: 16),
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -120,7 +120,7 @@ class _Body extends StatelessWidget {
                     ),
                   ),
                 ),
-                Flexible(
+                const Flexible(
                   child: Text(
                     "July 15, 2024",
                     style: TextStyle(
@@ -131,22 +131,22 @@ class _Body extends StatelessWidget {
               ],
             ),
 
-            BookingSummaryRow(
+            const BookingSummaryRow(
               title: "People",
               subtitle: "3",
             ),
 
-            BookingSummaryRow(
+            const BookingSummaryRow(
               title: "Price per Person",
               subtitle: "\$100.00",
             ),
 
-            BookingSummaryRow(
+            const BookingSummaryRow(
               title: "Discount by group",
               subtitle: "\$15.00",
             ),
 
-            BookingSummaryRow(
+            const BookingSummaryRow(
               title: "Wellcome Coupon (5%)",
               subtitle: "\$5.00",
             ),
@@ -171,7 +171,7 @@ class BookingSummaryRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Divider(
+        const Divider(
           height: 30,
         ),
         Row(
@@ -187,7 +187,7 @@ class BookingSummaryRow extends StatelessWidget {
             ),
             Text(
               subtitle,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
               ),
             ),

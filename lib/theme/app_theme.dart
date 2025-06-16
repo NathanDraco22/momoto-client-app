@@ -14,7 +14,7 @@ final value = ["9ac5e5", "4fb19d", "edce7a", "c98c9a", "e5c6c3"];
 
 class AppTheme {
   ThemeData getLightTheme() => ThemeData.light().copyWith(
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
+    bottomNavigationBarTheme: const BottomNavigationBarThemeData(
       backgroundColor: Colors.white,
     ),
     scaffoldBackgroundColor: const Color.fromARGB(255, 241, 243, 244),
@@ -25,12 +25,12 @@ class AppTheme {
     ),
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        side: BorderSide(
+        side: const BorderSide(
           color: primaryColor,
           width: 2,
         ),
         shape: RoundedRectangleBorder(
-          side: BorderSide(
+          side: const BorderSide(
             color: primaryColor,
             width: 2,
           ),
@@ -45,13 +45,13 @@ class AppTheme {
         ),
       ),
     ),
-    appBarTheme: AppBarTheme(
+    appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
       foregroundColor: Colors.black,
       surfaceTintColor: Colors.transparent,
       centerTitle: true,
     ),
-    colorScheme: ColorScheme.light().copyWith(
+    colorScheme: const ColorScheme.light().copyWith(
       primary: primaryColor,
       secondaryContainer: cornColorColor,
     ),

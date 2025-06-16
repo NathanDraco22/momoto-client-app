@@ -53,6 +53,7 @@ class _Body extends StatelessWidget {
                 height: screenSized.height * 0.5,
                 child: _PhotosSection(siteId: siteId),
               ),
+              // ignore: prefer_const_constructors
               _DescriptionSection(),
             ],
           ),

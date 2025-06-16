@@ -6,20 +6,20 @@ class MainAppBar extends StatelessWidget implements PreferredSizeWidget {
   });
 
   @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
       title: const Text("Turismo"),
       centerTitle: false,
-      actionsPadding: EdgeInsets.only(right: 8),
+      actionsPadding: const EdgeInsets.only(right: 8),
       actions: [
         GestureDetector(
           onTap: () {
             Scaffold.of(context).openEndDrawer();
           },
-          child: CircleAvatar(
+          child: const CircleAvatar(
             radius: 20,
           ),
         ),

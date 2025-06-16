@@ -31,7 +31,7 @@ class _Body extends StatelessWidget {
         onPressed: () {
           context.go('/explore');
         },
-        child: Text("Go to Main Screen"),
+        child: const Text("Go to Main Screen"),
       ),
     );
   }

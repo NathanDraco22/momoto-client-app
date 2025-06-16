@@ -59,7 +59,7 @@ class SiteCard extends StatelessWidget {
           alignment: Alignment.topRight,
           child: IconButton(
             onPressed: () {},
-            icon: Icon(
+            icon: const Icon(
               Icons.favorite,
               color: Colors.white,
             ),

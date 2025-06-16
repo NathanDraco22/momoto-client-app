@@ -28,12 +28,12 @@ class _Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Center(
       child: GridView.builder(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 8,
           vertical: 16,
         ),
         itemCount: 10,
-        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+        gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
           maxCrossAxisExtent: 200,
           mainAxisExtent: 260,
           mainAxisSpacing: 10,

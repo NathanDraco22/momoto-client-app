@@ -7,90 +7,85 @@ class ProfileDrawer extends StatelessWidget {
   Widget build(BuildContext context) {
     return Drawer(
       child: Padding(
-        padding: EdgeInsets.all(8.0),
+        padding: const EdgeInsets.all(8.0),
         child: SafeArea(
-          child: LayoutBuilder(
-            builder: (context, constraints) {
-              print(constraints.maxHeight);
-              return Column(
-                children: [
-                  SizedBox(height: 8),
-                  CircleAvatar(
-                    radius: 60,
-                  ),
-                  SizedBox(height: 16),
-                  Text(
-                    "John Doe",
-                    style: TextStyle(
-                      fontSize: 26,
-                      fontWeight: FontWeight.bold,
+          child: Column(
+            children: [
+              const SizedBox(height: 8),
+              const CircleAvatar(
+                radius: 60,
+              ),
+              const SizedBox(height: 16),
+              const Text(
+                "John Doe",
+                style: TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+
+              Text(
+                "jonh.doe@me.com",
+                style: TextStyle(
+                  fontSize: 16,
+                  color: Colors.grey.shade600,
+                ),
+              ),
+
+              const SizedBox(height: 8),
+
+              ListTile(
+                leading: const Icon(Icons.history_edu_sharp),
+                title: const Text("Booking History"),
+                onTap: () {},
+              ),
+
+              ListTile(
+                leading: const Icon(Icons.help_outline_outlined),
+                title: const Text("Help/Contact"),
+                onTap: () {},
+              ),
+              ListTile(
+                leading: const Icon(Icons.description_outlined),
+                title: const Text("Terms and Conditions"),
+                onTap: () {},
+              ),
+              const Spacer(),
+
+              SizedBox(
+                width: double.infinity,
+                child: OutlinedButton.icon(
+                  onPressed: () {},
+                  style: OutlinedButton.styleFrom(
+                    side: BorderSide(
+                      color: Colors.red.shade200,
+                      width: 2,
                     ),
+                    foregroundColor: Colors.red.shade200,
+                    overlayColor: Colors.red,
                   ),
 
-                  Text(
-                    "jonh.doe@me.com",
-                    style: TextStyle(
-                      fontSize: 16,
-                      color: Colors.grey.shade600,
-                    ),
-                  ),
+                  label: const Icon(Icons.logout_outlined),
+                  icon: const Text("Logout"),
+                ),
+              ),
 
-                  SizedBox(height: 8),
+              const SizedBox(height: 8),
 
-                  ListTile(
-                    leading: Icon(Icons.history_edu_sharp),
-                    title: Text("Booking History"),
-                    onTap: () {},
-                  ),
-
-                  ListTile(
-                    leading: Icon(Icons.help_outline_outlined),
-                    title: Text("Help/Contact"),
-                    onTap: () {},
-                  ),
-                  ListTile(
-                    leading: Icon(Icons.description_outlined),
-                    title: Text("Terms and Conditions"),
-                    onTap: () {},
-                  ),
-                  Spacer(),
-
-                  SizedBox(
-                    width: double.infinity,
-                    child: OutlinedButton.icon(
-                      onPressed: () {},
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(
-                          color: Colors.red.shade200,
-                          width: 2,
-                        ),
-                        foregroundColor: Colors.red.shade200,
-                        overlayColor: Colors.red,
-                      ),
-
-                      label: Icon(Icons.logout_outlined),
-                      icon: Text("Logout"),
-                    ),
-                  ),
-
-                  SizedBox(height: 8),
-
-                  DefaultTextStyle(
-                    style: TextStyle(
-                      fontSize: 12,
-                      color: Colors.grey.shade400,
-                    ),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Text("Version 1.0.0"),
-                        Text("Copyright @ 2026"),
-                      ],
-                    ),
-                  ),
-                ],
-              );
-            },
+              DefaultTextStyle(
+                style: TextStyle(
+                  fontSize: 12,
+                  color: Colors.grey.shade400,
+                ),
+                child: const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Text("Version 1.0.0"),
+                    Text("Copyright @ 2026"),
+                  ],
+                ),
+              ),
+            ],
           ),
         ),
       ),

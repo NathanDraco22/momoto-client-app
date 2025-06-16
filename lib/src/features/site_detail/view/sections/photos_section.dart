@@ -28,7 +28,7 @@ class _PhotosSection extends StatelessWidget {
           child: Container(
             height: 12,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(12)),
+              borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
               color: Theme.of(context).scaffoldBackgroundColor,
             ),
           ),
